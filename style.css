@@ -1,6 +1,69 @@
-h1 {
-  color: red;
-  background-color: aqua;
-  max-width: 300hv;
-  height: 300px;
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+/*стилизация header*/
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  height: 293px;
+}
+
+.header__links-list {
+  display: flex;
+  list-style-type: circle;
+  gap: 20px;
+  text-decoration: none;
+  padding-left: 20px; /*нужно будет переопределить отступ*/
+}
+
+/*убрали маркер у первого элемента */
+.header__links-list-item_no-bullit {
+  list-style-type: none;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo-image {
+  width: 124px;
+  height: 95px;
+}
+
+/*стилизуем цвет ссылок */
+
+.header__link {
+  color: black;
+}
+
+/*стилизация адресса*/
+.address {
+  max-width: 240px;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.address a,
+span {
+  color: black;
+  font-style: normal;
 }
